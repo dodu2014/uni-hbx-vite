@@ -12,7 +12,7 @@ const toPageA = () => {
 }
 
 onLoad(() => {
-  uni.hideTabBar()
+  // uni.hideTabBar()
 })
 </script>
 

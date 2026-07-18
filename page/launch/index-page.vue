@@ -10,17 +10,17 @@ definePage({
 })
 
 onLoad(() => {
-  uni.hideTabBar()
+  // uni.hideTabBar()
 })
 
 onMounted(async () => {
-  await sleep(900)
-  const token = uniStorage.get(CacheKeyEnum.TOKEN)
-  if (token) {
-    switchTab(PageUrlConst.PAGE_HOME_INDEX_PAGE)
-  } else {
-    reLaunch(PageUrlConst.PAGE_LOGIN_INDEX_PAGE)
-  }
+  // await sleep(900)
+  // const token = uniStorage.get(CacheKeyEnum.TOKEN)
+  // if (token) {
+  //   switchTab(PageUrlConst.PAGE_HOME_INDEX_PAGE)
+  // } else {
+  //   reLaunch(PageUrlConst.PAGE_LOGIN_INDEX_PAGE)
+  // }
 })
 </script>
 

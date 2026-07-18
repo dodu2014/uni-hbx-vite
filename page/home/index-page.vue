@@ -8,13 +8,13 @@ definePage({
 })
 
 onLoad(() => {
-  uni.hideTabBar()
+  // uni.hideTabBar()
 })
 </script>
 
 <template>
-  <blank-layout>
+  <view>
     <view>首页</view>
     <index-test />
-  </blank-layout>
+  </view>
 </template>

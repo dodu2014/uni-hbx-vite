@@ -5,7 +5,7 @@ export default defineUniPages({
     autoscan: false,
   },
   globalStyle: {
-    navigationStyle: 'custom',
+    navigationStyle: 'default',
     navigationBarTextStyle: 'black',
     enablePullDownRefresh: false,
     'app-plus': {
@@ -15,17 +15,17 @@ export default defineUniPages({
   tabBar: {
     list: [
       {
-        visible: false,
+        visible: true,
         pagePath: 'page/launch/index-page',
         text: '启动',
       },
       {
-        visible: false,
+        visible: true,
         pagePath: 'page/login/index-page',
         text: '登录',
       },
       {
-        visible: false,
+        visible: true,
         pagePath: 'page/home/index-page',
         text: '首页',
       },

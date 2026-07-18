@@ -1,7 +1,7 @@
 {
-  "name": "UNI-HBX-VITE",
-  "appid": "__UNI__33ED0E8",
-  "description": "UNI-HBX-VITE",
+  "name": "量点",
+  "appid": "__UNI__1A12AF3",
+  "description": "量点",
   "versionName": "1.8.0",
   "versionCode": "16",
   "transformPx": false,
@@ -136,7 +136,7 @@
   "mp-alipay": {
     "usingComponents": true,
     "appid": "touristappid",
-    "projectname": "UNI-HBX-VITE",
+    "projectname": "量点",
     "component2": true,
     "enableAppxNg": true,
     "axmlStrictCheck": false,
@@ -148,7 +148,7 @@
   "mp-baidu": {
     "usingComponents": true,
     "appid": "17767960",
-    "projectname": "UNI-HBX-VITE",
+    "projectname": "量点",
     "setting": {
       "autoAudits": false,
       "urlCheck": false
@@ -160,7 +160,7 @@
   "mp-toutiao": {
     "usingComponents": true,
     "appid": "testAppId",
-    "projectname": "UNI-HBX-VITE",
+    "projectname": "量点",
     "settings": {
       "urlCheck": false,
       "es6": true,
@@ -178,8 +178,8 @@
   "vueVersion": "3",
   "mp-xhs": {
     "appid": "touristappid",
-    "projectname": "UNI-HBX-VITE",
-    "description": "UNI-HBX-VITE",
+    "projectname": "量点",
+    "description": "量点",
     "compileType": "miniprogram",
     "libVersion": "",
     "setting": {
@@ -197,7 +197,7 @@
   },
   "mp-kuaishou": {
     "appid": "ks1234",
-    "projectname": "UNI-HBX-VITE",
+    "projectname": "量点",
     "compileType": "miniprogram",
     "libVersion": "",
     "setting": {
@@ -233,7 +233,7 @@
   },
   "mp-qq": {
     "appid": "1108100302",
-    "projectname": "UNI-HBX-VITE",
+    "projectname": "量点",
     "setting": {
       "urlCheck": false,
       "es6": false,
@@ -257,7 +257,7 @@
     "sdkConfigs": {
       "maps": {}
     },
-    "title": "UNI-HBX-VITE",
+    "title": "量点",
     "router": {
       "mode": "hash",
       "base": "/"
