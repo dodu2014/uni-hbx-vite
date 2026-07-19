@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <!-- 金色渐变 -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6600"/>
+      <stop offset="50%" stop-color="#FFA500"/>
+      <stop offset="100%" stop-color="#FF8C00"/>
+    </linearGradient>
+
+    <!-- 蓝色渐变 -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09c"/>
+      <stop offset="100%" stop-color="#006699"/>
+    </linearGradient>
+
+    <!-- 橙色渐变 -->
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#f63"/>
+    </linearGradient>
+
+    <!-- 光晕效果 -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowStrong" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== 背景装饰圆环 ========== -->
+  <g opacity="0.2">
+    <circle cx="300" cy="230" r="170" fill="none" stroke="#ff6600" stroke-width="1" stroke-dasharray="12,8">
+      <animateTransform attributeName="transform" type="rotate" from="0 300 230" to="360 300 230" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="230" r="190" fill="none" stroke="#FFA500" stroke-width="0.5" stroke-dasharray="6,10">
+      <animateTransform attributeName="transform" type="rotate" from="360 300 230" to="0 300 230" dur="25s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ========== 连线动画 (从中心向外扩散) ========== -->
+  <g stroke="url(#goldGradient)" stroke-width="2.5" fill="none" opacity="0.8">
+    <!-- 上 - 穿山甲 -->
+    <path d="M300,175 L300,95" stroke-dasharray="8,6">
+      <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="300" cy="95" r="5" fill="#ff6600">
+      <animate attributeName="r" values="4;7;4" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- 下 - 优量汇 -->
+    <path d="M300,285 L300,365" stroke-dasharray="8,6">
+      <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="1.5s" begin="0.2s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="300" cy="365" r="5" fill="#ff6600">
+      <animate attributeName="r" values="4;7;4" dur="1.5s" begin="0.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- 左 - 百度 -->
+    <path d="M175,230 L95,230" stroke-dasharray="8,6">
+      <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="1.5s" begin="0.4s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="95" cy="230" r="5" fill="#ff6600">
+      <animate attributeName="r" values="4;7;4" dur="1.5s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- 右 - 快手 -->
+    <path d="M425,230 L505,230" stroke-dasharray="8,6">
+      <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="505" cy="230" r="5" fill="#ff6600">
+      <animate attributeName="r" values="4;7;4" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- 左上 - 芒果TV -->
+    <path d="M235,185 L157,107" stroke-dasharray="8,6">
+      <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="1.5s" begin="0.1s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="157" cy="107" r="4" fill="#ff6600">
+      <animate attributeName="r" values="3;6;3" dur="1.5s" begin="0.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.1s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- 右上 - 腾讯广告 -->
+    <path d="M365,185 L443,107" stroke-dasharray="8,6">
+      <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="443" cy="107" r="4" fill="#ff6600">
+      <animate attributeName="r" values="3;6;3" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- 左下 - 淘联盟 -->
+    <path d="M235,275 L157,353" stroke-dasharray="8,6">
+      <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="157" cy="353" r="4" fill="#ff6600">
+      <animate attributeName="r" values="3;6;3" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- 右下 - Mopub -->
+    <path d="M365,275 L443,353" stroke-dasharray="8,6">
+      <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="1.5s" begin="0.7s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="443" cy="353" r="4" fill="#ff6600">
+      <animate attributeName="r" values="3;6;3" dur="1.5s" begin="0.7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ========== 中心Logo ========== -->
+  <g transform="translate(300, 230)">
+    <!-- 外圈脉动 -->
+    <circle cx="0" cy="0" r="55" fill="#ff6600" opacity="0.2">
+      <animate attributeName="r" values="58;68;58" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.3;0.15" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#ff6600" stroke-width="2" opacity="0.6" stroke-dasharray="6,4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Logo主体 -->
+    <g transform="translate(-36, -32) scale(0.75)" filter="url(#glow)">
+      <path fill="url(#blueGradient)" d="M32.5,28.7c-.9.9-.9,2.4,0,3.4l.5.5c3.6,3.6,9.9,3.6,13.6,0l14.6-14.6,3.4,3.4-4.3,4.3,27.7,27.7c11-11.3,10.9-28.8-.3-40-10.3-10.3-26-11.1-37.2-2.6l-17.8,17.9h-.2Z"/>
+      <path fill="url(#orangeGradient)" d="M36.4,66.3l3.4-3.4,19.2,19.2,5.7-5.7-19.2-19.2,3.4-3.4,19.2,19.2,5.7-5.7-19.2-19.2,3.4-3.4,19.2,19.2,7.2-7.2-27.7-27.7-6.8,6.8c-2.7,2.7-6.3,4.2-10.2,4.2s-7.4-1.5-10.2-4.2l-.5-.5c-2.8-2.8-2.8-7.3,0-10.2l15.4-15.5c-11.2-7.4-26-6.3-35.9,3.6-11.3,11.4-11.3,29.1,0,40.4l36.1,36c.9.9,2.2,1.4,3.4,1.4s2.4-.5,3.4-1.4l4.3-4.3-19.2-19.2h0l-.1.2Z"/>
+    </g>
+
+    <!-- 中心发光点 -->
+    <circle cx="0" cy="0" r="8" fill="#fff" opacity="0.9" filter="url(#glow)">
+      <animate attributeName="r" values="6;10;6" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ========== 广告联盟Logo (使用animateTransform实现浮动) ========== -->
+
+  <!-- 穿山甲 - 上 -->
+  <g transform="translate(300, 55)">
+    <animateTransform attributeName="transform" type="translate" values="300,55; 300,49; 300,55" dur="3s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="40" fill="#ffffff" stroke="#ff6600" stroke-width="2.5" filter="url(#glow)"/>
+    <text x="0" y="-3" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">穿山甲</text>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-size="8" fill="#666" text-anchor="middle">PANGLE</text>
+  </g>
+
+  <!-- 优量汇 - 下 -->
+  <g transform="translate(300, 385)">
+    <animateTransform attributeName="transform" type="translate" values="300,385; 300,379; 300,385" dur="3s" begin="0.4s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="40" fill="#ffffff" stroke="#ff6600" stroke-width="2.5" filter="url(#glow)"/>
+    <text x="0" y="-3" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">优量汇</text>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-size="8" fill="#666" text-anchor="middle">YOOLIANG</text>
+  </g>
+
+  <!-- 百度 - 左 -->
+  <g transform="translate(55, 230)">
+    <animateTransform attributeName="transform" type="translate" values="55,230; 55,224; 55,230" dur="3s" begin="0.8s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="40" fill="#ffffff" stroke="#ff6600" stroke-width="2.5" filter="url(#glow)"/>
+    <text x="0" y="-3" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">百度</text>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-size="8" fill="#666" text-anchor="middle">BAIDU</text>
+  </g>
+
+  <!-- 快手 - 右 -->
+  <g transform="translate(545, 230)">
+    <animateTransform attributeName="transform" type="translate" values="545,230; 545,224; 545,230" dur="3s" begin="1.2s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="40" fill="#ffffff" stroke="#ff6600" stroke-width="2.5" filter="url(#glow)"/>
+    <text x="0" y="-3" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">快手</text>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-size="8" fill="#666" text-anchor="middle">KUAISHOU</text>
+  </g>
+
+  <!-- 芒果TV - 左上 -->
+  <g transform="translate(145, 95)">
+    <animateTransform attributeName="transform" type="translate" values="145,95; 145,89; 145,95" dur="3s" begin="1.6s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="34" fill="#ffffff" stroke="#ff6600" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-3" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#333" text-anchor="middle" font-weight="bold">芒果TV</text>
+    <text x="0" y="11" font-family="Arial, sans-serif" font-size="7" fill="#666" text-anchor="middle">MGTV</text>
+  </g>
+
+  <!-- 腾讯广告 - 右上 -->
+  <g transform="translate(455, 95)">
+    <animateTransform attributeName="transform" type="translate" values="455,95; 455,89; 455,95" dur="3s" begin="2s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="34" fill="#ffffff" stroke="#ff6600" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-3" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#333" text-anchor="middle" font-weight="bold">腾讯广告</text>
+    <text x="0" y="11" font-family="Arial, sans-serif" font-size="7" fill="#666" text-anchor="middle">TENCENT</text>
+  </g>
+
+  <!-- 淘联盟 - 左下 -->
+  <g transform="translate(145, 365)">
+    <animateTransform attributeName="transform" type="translate" values="145,365; 145,359; 145,365" dur="3s" begin="2.4s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="34" fill="#ffffff" stroke="#ff6600" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-3" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#333" text-anchor="middle" font-weight="bold">淘联盟</text>
+    <text x="0" y="11" font-family="Arial, sans-serif" font-size="7" fill="#666" text-anchor="middle">TAO</text>
+  </g>
+
+  <!-- Mopub - 右下 -->
+  <g transform="translate(455, 365)">
+    <animateTransform attributeName="transform" type="translate" values="455,365; 455,359; 455,365" dur="3s" begin="2.8s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="34" fill="#ffffff" stroke="#ff6600" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-3" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle" font-weight="bold">Mopub</text>
+    <text x="0" y="11" font-family="Arial, sans-serif" font-size="7" fill="#666" text-anchor="middle">MOPUB</text>
+  </g>
+
+  <!-- ========== 底部标题 ========== -->
+  <g filter="url(#glow)">
+    <text x="300" y="468" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="bold" fill="url(#goldGradient)" text-anchor="middle" letter-spacing="3">量点广告联盟聚合平台</text>
+  </g>
+
+  <!-- 装饰线 -->
+  <line x1="185" y1="468" x2="220" y2="468" stroke="url(#goldGradient)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="380" y1="468" x2="415" y2="468" stroke="url(#goldGradient)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <text x="300" y="488" font-family="Arial, sans-serif" font-size="10" fill="#999" text-anchor="middle" letter-spacing="1">LIANGDIAN AD ALLIANCE AGGREGATION PLATFORM</text>
+</svg>

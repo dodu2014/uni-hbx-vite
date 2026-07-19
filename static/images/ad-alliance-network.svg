@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <!-- 金色渐变 -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#FFA500"/>
+      <stop offset="100%" style="stop-color:#FF8C00"/>
+    </linearGradient>
+
+    <!-- 蓝色渐变 -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#09c"/>
+      <stop offset="100%" style="stop-color:#006699"/>
+    </linearGradient>
+
+    <!-- 橙色渐变 -->
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35"/>
+      <stop offset="100%" style="stop-color:#f63"/>
+    </linearGradient>
+
+    <!-- 光晕效果 -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowStrong" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- 白色光晕 -->
+    <filter id="whiteGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== 背景虚线圆环 ========== -->
+  <g opacity="0.2">
+    <circle cx="300" cy="230" r="180" fill="none" stroke="#FFD700" stroke-width="1" stroke-dasharray="6,4"/>
+    <circle cx="300" cy="230" r="200" fill="none" stroke="#FFD700" stroke-width="0.5" stroke-dasharray="4,6"/>
+  </g>
+
+  <!-- ========== 连线 (实线，带箭头) ========== -->
+  <g stroke="url(#goldGradient)" stroke-width="2" fill="none" opacity="0.8">
+    <!-- 上 - 穿山甲 -->
+    <line x1="300" y1="170" x2="300" y2="90"/>
+    <polygon points="300,85 295,95 305,95" fill="#FFD700" opacity="0.8"/>
+
+    <!-- 下 - 优量汇 -->
+    <line x1="300" y1="290" x2="300" y2="370"/>
+    <polygon points="300,375 295,365 305,365" fill="#FFD700" opacity="0.8"/>
+
+    <!-- 左 - 百度 -->
+    <line x1="170" y1="230" x2="90" y2="230"/>
+    <polygon points="85,230 95,225 95,235" fill="#FFD700" opacity="0.8"/>
+
+    <!-- 右 - 快手 -->
+    <line x1="430" y1="230" x2="510" y2="230"/>
+    <polygon points="515,230 505,225 505,235" fill="#FFD700" opacity="0.8"/>
+
+    <!-- 左上 - 芒果TV -->
+    <line x1="230" y1="180" x2="160" y2="110"/>
+    <polygon points="155,105 165,108 162,118" fill="#FFD700" opacity="0.8"/>
+
+    <!-- 右上 - 腾讯广告 -->
+    <line x1="370" y1="180" x2="440" y2="110"/>
+    <polygon points="445,105 435,108 438,118" fill="#FFD700" opacity="0.8"/>
+
+    <!-- 左下 - 淘联盟 -->
+    <line x1="230" y1="280" x2="160" y2="350"/>
+    <polygon points="155,355 165,352 162,342" fill="#FFD700" opacity="0.8"/>
+
+    <!-- 右下 - Mopub -->
+    <line x1="370" y1="280" x2="440" y2="350"/>
+    <polygon points="445,355 435,352 438,342" fill="#FFD700" opacity="0.8"/>
+  </g>
+
+  <!-- ========== 中心Logo ========== -->
+  <g transform="translate(300, 230)">
+    <!-- 外圈光晕 -->
+    <circle cx="0" cy="0" r="60" fill="#FFD700" opacity="0.15"/>
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.6"/>
+
+    <!-- Logo主体 -->
+    <g transform="translate(-36, -36) scale(0.75)" filter="url(#glow)">
+      <path fill="url(#blueGradient)" d="M32.5,28.7c-.9.9-.9,2.4,0,3.4l.5.5c3.6,3.6,9.9,3.6,13.6,0l14.6-14.6,3.4,3.4-4.3,4.3,27.7,27.7c11-11.3,10.9-28.8-.3-40-10.3-10.3-26-11.1-37.2-2.6l-17.8,17.9h-.2Z"/>
+      <path fill="url(#orangeGradient)" d="M36.4,66.3l3.4-3.4,19.2,19.2,5.7-5.7-19.2-19.2,3.4-3.4,19.2,19.2,5.7-5.7-19.2-19.2,3.4-3.4,19.2,19.2,7.2-7.2-27.7-27.7-6.8,6.8c-2.7,2.7-6.3,4.2-10.2,4.2s-7.4-1.5-10.2-4.2l-.5-.5c-2.8-2.8-2.8-7.3,0-10.2l15.4-15.5c-11.2-7.4-26-6.3-35.9,3.6-11.3,11.4-11.3,29.1,0,40.4l36.1,36c.9.9,2.2,1.4,3.4,1.4s2.4-.5,3.4-1.4l4.3-4.3-19.2-19.2h0l-.1.2Z"/>
+    </g>
+
+    <!-- 中心发光点 -->
+    <circle cx="0" cy="0" r="6" fill="#fff" filter="url(#whiteGlow)"/>
+  </g>
+
+  <!-- ========== 广告联盟Logo容器 ========== -->
+
+  <!-- 穿山甲 (Pangle) - 上 -->
+  <g transform="translate(300, 55)">
+    <circle cx="0" cy="0" r="38" fill="#ffffff" stroke="#FFD700" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-2" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#333" text-anchor="middle" font-weight="bold">穿山甲</text>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-size="8" fill="#666" text-anchor="middle">PANGLE</text>
+  </g>
+
+  <!-- 优量汇 - 下 -->
+  <g transform="translate(300, 405)">
+    <circle cx="0" cy="0" r="38" fill="#ffffff" stroke="#FFD700" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-2" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#333" text-anchor="middle" font-weight="bold">优量汇</text>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-size="8" fill="#666" text-anchor="middle">YOOLIANG</text>
+  </g>
+
+  <!-- 百度 - 左 -->
+  <g transform="translate(55, 230)">
+    <circle cx="0" cy="0" r="38" fill="#ffffff" stroke="#FFD700" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-2" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#333" text-anchor="middle" font-weight="bold">百度</text>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-size="8" fill="#666" text-anchor="middle">BAIDU</text>
+  </g>
+
+  <!-- 快手 - 右 -->
+  <g transform="translate(545, 230)">
+    <circle cx="0" cy="0" r="38" fill="#ffffff" stroke="#FFD700" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-2" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#333" text-anchor="middle" font-weight="bold">快手</text>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-size="8" fill="#666" text-anchor="middle">KUAISHOU</text>
+  </g>
+
+  <!-- 芒果TV - 左上 -->
+  <g transform="translate(145, 95)">
+    <circle cx="0" cy="0" r="32" fill="#ffffff" stroke="#FFD700" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-2" font-family="Microsoft YaHei, sans-serif" font-size="10" fill="#333" text-anchor="middle" font-weight="bold">芒果TV</text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="7" fill="#666" text-anchor="middle">MGTV</text>
+  </g>
+
+  <!-- 腾讯广告 - 右上 -->
+  <g transform="translate(455, 95)">
+    <circle cx="0" cy="0" r="32" fill="#ffffff" stroke="#FFD700" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-2" font-family="Microsoft YaHei, sans-serif" font-size="10" fill="#333" text-anchor="middle" font-weight="bold">腾讯广告</text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="7" fill="#666" text-anchor="middle">TENCENT</text>
+  </g>
+
+  <!-- 淘联盟 - 左下 -->
+  <g transform="translate(145, 365)">
+    <circle cx="0" cy="0" r="32" fill="#ffffff" stroke="#FFD700" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-2" font-family="Microsoft YaHei, sans-serif" font-size="10" fill="#333" text-anchor="middle" font-weight="bold">淘联盟</text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="7" fill="#666" text-anchor="middle">TAO</text>
+  </g>
+
+  <!-- Mopub - 右下 -->
+  <g transform="translate(455, 365)">
+    <circle cx="0" cy="0" r="32" fill="#ffffff" stroke="#FFD700" stroke-width="2" filter="url(#glow)"/>
+    <text x="0" y="-2" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle" font-weight="bold">Mopub</text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="7" fill="#666" text-anchor="middle">MOPUB</text>
+  </g>
+
+  <!-- ========== 底部标题 ========== -->
+  <g filter="url(#glow)">
+    <text x="300" y="468" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="bold" fill="url(#goldGradient)" text-anchor="middle" letter-spacing="3">量点广告联盟聚合平台</text>
+  </g>
+
+  <!-- 装饰线 -->
+  <line x1="185" y1="468" x2="220" y2="468" stroke="url(#goldGradient)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="380" y1="468" x2="415" y2="468" stroke="url(#goldGradient)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <text x="300" y="488" font-family="Arial, sans-serif" font-size="10" fill="#999" text-anchor="middle" letter-spacing="1">LIANGDIAN AD ALLIANCE AGGREGATION PLATFORM</text>
+</svg>
