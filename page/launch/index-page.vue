@@ -4,6 +4,7 @@ import { reLaunch, switchTab } from '@/util/routeUtil'
 
 definePage({
   type: 'home',
+  layout: 'default',
   style: {
     navigationBarTitleText: '启动',
   },

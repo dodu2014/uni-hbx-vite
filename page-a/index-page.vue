@@ -7,7 +7,7 @@ definePage({
 </script>
 
 <template>
-  <blank-layout>
+  <view>
     <view>分包</view>
-  </blank-layout>
+  </view>
 </template>

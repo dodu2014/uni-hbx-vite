@@ -17,8 +17,8 @@ onLoad(() => {
 </script>
 
 <template>
-  <blank-layout>
+  <view>
     <view class="text-64rpx text-purple">登录</view>
     <view @click="toPageA">分包</view>
-  </blank-layout>
+  </view>
 </template>

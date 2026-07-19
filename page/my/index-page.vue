@@ -7,9 +7,9 @@ definePage({
 </script>
 
 <template>
-  <blank-layout>
+  <view>
     <div class="index">my index</div>
-  </blank-layout>
+  </view>
 </template>
 
 <style scoped></style>
