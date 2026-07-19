@@ -102,7 +102,7 @@ export function beautifyJson(obj: any, indent = 2) {
 
 export function scanPageFilter(ctx: PageContext, inKey: 'pages' | 'subPages') {
   // 页面文件结尾
-  const pageFlag = '-page.vue'
+  const pageFlag = '.vue'
   if (inKey === 'pages') {
     const keysToRemove: string[] = []
     for (const key of ctx[inKey].keys()) {

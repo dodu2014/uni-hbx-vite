@@ -4,6 +4,7 @@ onLaunch(() => {
 
   // #ifdef APP
   plus.device.setWakelock(true)
+  plus.nativeUI.setUIStyle('dark');  // ‘light’表示浅色外观样式
   // #endif
 })
 

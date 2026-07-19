@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePage({
+  style: {
+    navigationBarTitleText: '业务',
+  },
+})
+</script>
 
 <template>
   <div class="business">business</div>

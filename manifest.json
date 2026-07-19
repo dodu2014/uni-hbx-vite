@@ -1,7 +1,7 @@
 {
   "name": "量点",
   "appid": "__UNI__1A12AF3",
-  "description": "量点",
+  "description": "量点聚合国内主流广告联盟，提供一站式流量变现方案。无需复杂对接，一次接入即可获取多家联盟优质广告资源，智能优化填充率与eCPM，助您轻松将用户访问转化为稳定收入，释放隐藏价值。从今天起，让流量真正点亮收益。",
   "versionName": "1.8.0",
   "versionCode": "16",
   "transformPx": false,
@@ -15,12 +15,20 @@
       "autoclose": true,
       "delay": 0
     },
-    "modules": {},
+    "modules": {
+      "Canvas": "nvue canvas",
+      "Camera": {},
+      "Geolocation": {},
+      "OAuth": {},
+      "Payment": {},
+      "Share": {},
+      "LivePusher": {}
+    },
     "distribute": {
       "android": {
         "permissions": [],
+        "schemes": "zhiweige-adunion,zhiweige.adunion,liangdian.adunion",
         "abiFilters": [
-          "armeabi-v7a",
           "arm64-v8a"
         ],
         "minSdkVersion": 21,
@@ -42,19 +50,101 @@
         "urlschemewhitelist": "iosamap,baidumap,qqmap"
       },
       "sdkConfigs": {
-        "ad": {},
-        "push": {},
-        "maps": {},
-        "oauth": {},
-        "geolocation": {}
+        "geolocation": {
+          "system": {
+            "__platform__": [
+              "android"
+            ]
+          }
+        },
+        "ad": {
+          "gm": {},
+          "gdt": {},
+          "ks": {},
+          "sigmob": {},
+          "hw": {},
+          "bd": {},
+          "zy": {},
+          "bz": {},
+          "fl": {},
+          "jl": {},
+          "yt": {},
+          "jt": {},
+          "wa": {},
+          "ks-content": {},
+          "gm-content": {}
+        },
+        "oauth": {
+          "weixin": {
+            "appid": "wx7d5adabd3911a519",
+            "appsecret": "0c691d53aca3e286a32a0ec2c60e19aa",
+            "UniversalLinks": ""
+          }
+        },
+        "payment": {
+          "weixin": {
+            "__platform__": [
+              "android"
+            ],
+            "appid": "wx7d5adabd3911a519",
+            "UniversalLinks": ""
+          }
+        },
+        "share": {
+          "weixin": {
+            "appid": "wx7d5adabd3911a519",
+            "UniversalLinks": ""
+          }
+        }
       },
-      "icons": {},
+      "icons": {
+        "android": {
+          "hdpi": "static/icons/72x72.png",
+          "xhdpi": "static/icons/96x96.png",
+          "xxhdpi": "static/icons/144x144.png",
+          "xxxhdpi": "static/icons/192x192.png"
+        },
+        "ios": {
+          "appstore": "static/icons/1024x1024.png",
+          "ipad": {
+            "app": "static/icons/76x76.png",
+            "app@2x": "static/icons/152x152.png",
+            "notification": "static/icons/20x20.png",
+            "notification@2x": "static/icons/40x40.png",
+            "proapp@2x": "static/icons/167x167.png",
+            "settings": "static/icons/29x29.png",
+            "settings@2x": "static/icons/58x58.png",
+            "spotlight": "static/icons/40x40.png",
+            "spotlight@2x": "static/icons/80x80.png"
+          },
+          "iphone": {
+            "app@2x": "static/icons/120x120.png",
+            "app@3x": "static/icons/180x180.png",
+            "notification@2x": "static/icons/40x40.png",
+            "notification@3x": "static/icons/60x60.png",
+            "settings@2x": "static/icons/58x58.png",
+            "settings@3x": "static/icons/87x87.png",
+            "spotlight@2x": "static/icons/80x80.png",
+            "spotlight@3x": "static/icons/120x120.png"
+          }
+        }
+      },
       "splashscreen": {
         "androidStyle": "default",
         "useOriginalMsgbox": true,
         "iosStyle": "common"
+      },
+      "plugins": {
+        "audio": {
+          "mp3": {
+            "description": "Android平台录音支持MP3格式文件"
+          }
+        }
       }
     },
+    "nvueCompiler": "uni-app",
+    "darkmode": true,
+    "themeLocation": "theme.json",
     "compatible": {
       "ignoreVersion": true
     },
@@ -69,190 +159,25 @@
   },
   "quickapp": {},
   "mp-weixin": {
-    "appid": "wx18ea457b6b4c51d3",
+    "appid": "",
     "setting": {
-      "urlCheck": false,
-      "condition": false,
-      "es6": true,
-      "es7": false,
-      "enhance": true,
-      "postcss": true,
-      "minified": true,
-      "minifyWXSS": true,
-      "minifyWXML": true,
-      "swc": false,
-      "uglifyFileName": false,
-      "ignoreUploadUnusedFiles": true,
-      "autoAudits": false,
-      "compileHotReLoad": true,
-      "preloadBackgroundData": false,
-      "lazyloadPlaceholderEnable": false,
-      "useStaticServer": false,
-      "bigPackageSizeSupport": true,
-      "skylineRenderEnable": false,
-      "babelSetting": {
-        "outputPath": "@babel/runtime",
-        "ignore": []
-      },
-      "useCompilerPlugins": false,
-      "disableUseStrict": false,
-      "uploadWithSourceMap": false,
-      "localPlugins": false,
-      "packNpmManually": false,
-      "coverView": true,
-      "ignoreDevUnusedFiles": true,
-      "checkInvalidKey": false,
-      "showShadowRootInWxmlPanel": true,
-      "useIsolateContext": true,
-      "useMultiFrameRuntime": true,
-      "useApiHook": false,
-      "useApiHostProcess": false,
-      "useLanDebug": false,
-      "enableEngineNative": false,
-      "showES6CompileOption": true,
-      "checkSiteMap": false
-    },
-    "usingComponents": true,
-    "libVersion": "3.11.2",
-    "plugins": {},
-    "requiredPrivateInfos": [
-      "getLocation",
-      "chooseLocation",
-      "onLocationChange",
-      "startLocationUpdateBackground"
-    ],
-    "requiredBackgroundModes": [
-      "location"
-    ],
-    "permission": {
-      "scope.userLocation": {
-        "desc": "请允许使用定位，以便于您进行地理位置相关活动"
-      }
-    },
-    "optimization": {
-      "subPackages": true
-    }
-  },
-  "mp-alipay": {
-    "usingComponents": true,
-    "appid": "touristappid",
-    "projectname": "量点",
-    "component2": true,
-    "enableAppxNg": true,
-    "axmlStrictCheck": false,
-    "enableParallelLoader": true,
-    "enableDistFileMinify": true,
-    "enableNodeModuleBabelTransform": true,
-    "styleIsolation": "shared"
-  },
-  "mp-baidu": {
-    "usingComponents": true,
-    "appid": "17767960",
-    "projectname": "量点",
-    "setting": {
-      "autoAudits": false,
       "urlCheck": false
     },
-    "optimization": {
-      "subPackages": true
-    }
+    "usingComponents": true
+  },
+  "mp-alipay": {
+    "usingComponents": true
+  },
+  "mp-baidu": {
+    "usingComponents": true
   },
   "mp-toutiao": {
-    "usingComponents": true,
-    "appid": "testAppId",
-    "projectname": "量点",
-    "settings": {
-      "urlCheck": false,
-      "es6": true,
-      "postcss": false,
-      "minified": true,
-      "newFeature": true
-    },
-    "optimization": {
-      "subPackages": true
-    }
+    "usingComponents": true
   },
   "uniStatistics": {
     "enable": false
   },
   "vueVersion": "3",
-  "mp-xhs": {
-    "appid": "touristappid",
-    "projectname": "量点",
-    "description": "量点",
-    "compileType": "miniprogram",
-    "libVersion": "",
-    "setting": {
-      "minified": false,
-      "urlCheck": false,
-      "es6": true,
-      "postcss": false,
-      "newFeature": true,
-      "bigPackageSizeSupport": true,
-      "useNewCompiler": true
-    },
-    "packOptions": {
-      "ignore": []
-    }
-  },
-  "mp-kuaishou": {
-    "appid": "ks1234",
-    "projectname": "量点",
-    "compileType": "miniprogram",
-    "libVersion": "",
-    "setting": {
-      "urlCheck": false,
-      "es6": true,
-      "enhance": false,
-      "postcss": false,
-      "preloadBackgroundData": false,
-      "minified": true,
-      "newFeature": true,
-      "coverView": true,
-      "nodeModules": false,
-      "autoAudits": false,
-      "showShadowRootInWxmlPanel": true,
-      "scopeDataCheck": false,
-      "uglifyFileName": false,
-      "checkInvalidKey": true,
-      "checkSiteMap": true,
-      "uploadWithSourceMap": true,
-      "compileHotReLoad": true,
-      "babelSetting": {
-        "ignore": [],
-        "disablePlugins": [],
-        "outputPath": ""
-      },
-      "useIsolateContext": true,
-      "useCompilerModule": false,
-      "userConfirmedUseCompilerModuleSwitch": false
-    },
-    "optimization": {
-      "subPackages": true
-    }
-  },
-  "mp-qq": {
-    "appid": "1108100302",
-    "projectname": "量点",
-    "setting": {
-      "urlCheck": false,
-      "es6": false,
-      "postcss": false,
-      "minified": false,
-      "newFeature": true,
-      "nodeModules": false,
-      "autoAudits": false,
-      "uploadWithSourceMap": false,
-      "uglifyFileName": true,
-      "remoteDebugLogEnable": false,
-      "prefetch": false
-    },
-    "optimization": {
-      "subPackages": true
-    }
-  },
-  "locale": "zh-Hans",
-  "fallbackLocale": "zh-Hans",
   "h5": {
     "sdkConfigs": {
       "maps": {}
@@ -270,5 +195,7 @@
         "enable": true
       }
     }
-  }
+  },
+  "locale": "zh-Hans",
+  "fallbackLocale": "zh-Hans"
 }

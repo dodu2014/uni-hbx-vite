@@ -7,11 +7,20 @@ export const PageUrlConst = {
   /** 启动 */
   PAGE_LAUNCH_INDEX_PAGE: '/page/launch/index-page',
 
+  /** 业务 */
+  PAGE_BUSINESS_BUSINESS: '/page/business/business',
+
+  /** 业务 */
+  PAGE_BUSINESS_INDEX: '/page/business/index',
+
   /** 首页 */
   PAGE_HOME_INDEX_PAGE: '/page/home/index-page',
 
   /** 登录 */
   PAGE_LOGIN_INDEX_PAGE: '/page/login/index-page',
+
+  /** 我的 */
+  PAGE_MY_INDEX_PAGE: '/page/my/index-page',
 
   /** 分包 */
   PAGE_A_INDEX_PAGE: '/page-a/index-page',

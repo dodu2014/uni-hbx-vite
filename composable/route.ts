@@ -34,6 +34,9 @@ export const interceptorOptions: UniApp.InterceptorOptions = {
       }
     }
 
+    console.log(
+      `【APP】页面：${parsedUrl}，是否存在于白名单：${RouteWhiteUrlEnum.includes(parsedUrl)}`,
+    )
     if (!RouteWhiteUrlEnum.includes(parsedUrl)) {
       if (!userStore.token) {
         showToast('还未登录，即将跳转...')
