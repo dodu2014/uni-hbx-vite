@@ -18,7 +18,6 @@ onLoad(() => {
 
 <template>
   <blank-layout>
-    <view style="height: 400px" />
     <view class="text-64rpx text-purple">登录</view>
     <view @click="toPageA">分包</view>
   </blank-layout>

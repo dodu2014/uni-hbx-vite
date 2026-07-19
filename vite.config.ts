@@ -32,6 +32,9 @@ export default ({ mode }: ConfigEnv) => {
   consola.info('当前终端:', chalk.green(UNI_PLATFORM))
   return defineConfig({
     envDir,
+    optimizeDeps: {
+      exclude: ['@wot-ui/ui'],
+    },
     plugins: [
       UniHelperVitePluginUniComponents,
       UnpluginAutoImport,
@@ -53,11 +56,11 @@ export default ({ mode }: ConfigEnv) => {
       ],
     },
     css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: `@import '~@/style/variable.scss';`,
-        },
-      },
+      // preprocessorOptions: {
+      //   scss: {
+      //     additionalData: `@import '~@/style/variable.scss';`,
+      //   },
+      // },
     },
     server: {
       host: true,

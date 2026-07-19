@@ -18,7 +18,8 @@
         "util/**/*.ts",
         "App.vue",
         "main.ts",
-        "Root.vue"
+        "Root.vue",
+        "@wot-ui/ui/global"
     ],
     "exclude": ["**/uni_modules/**", "**/unpackage/**", "**/dist/**", "**/node_modules/**"],
     "compilerOptions": {

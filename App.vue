@@ -17,6 +17,9 @@ onHide(() => {
 </script>
 
 <style lang="scss">
+@use '@wot-ui/ui/styles/theme/index.scss' as *;
+
+@import '@/style/variable.scss';
 @import '@/style/global.scss';
 @import '@/style/font/uhv.scss';
 </style>

@@ -15,6 +15,8 @@ declare module 'vue' {
     BlankLayout: typeof import('@/layout/BlankLayout.vue')['BlankLayout']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    WdButton: typeof import('@wot-ui/ui/components/wd-button/wd-button.vue')['WdButton']
+    WdCard: typeof import('@wot-ui/ui/components/wd-card/wd-card.vue')['WdCard']
   }
 }
 
@@ -23,4 +25,6 @@ declare global {
   const BlankLayout: typeof import('@/layout/BlankLayout.vue')['BlankLayout']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
+  const WdButton: typeof import('@wot-ui/ui/components/wd-button/wd-button.vue')['WdButton']
+  const WdCard: typeof import('@wot-ui/ui/components/wd-card/wd-card.vue')['WdCard']
 }

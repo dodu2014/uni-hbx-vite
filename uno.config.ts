@@ -1,4 +1,4 @@
-import type { Variant } from 'unocss'
+import type { PresetOrFactoryAwaitable, Variant } from 'unocss'
 
 import {
   blue,
@@ -19,6 +19,7 @@ import {
 import { isMp } from '@uni-helper/uni-env'
 import { presetUni } from '@uni-helper/unocss-preset-uni'
 import presetLegacyCompat from '@unocss/preset-legacy-compat'
+import { presetWot } from '@wot-ui/unocss-preset'
 import { defineConfig, transformerDirectives, transformerVariantGroup } from 'unocss'
 
 import {
@@ -146,6 +147,9 @@ export default defineConfig({
       remRpx: isMp,
       attributify: false,
     }),
+    presetWot({
+      preflight: false,
+    }) as PresetOrFactoryAwaitable<object>,
     presetLegacyCompat({
       commaStyleColorFunction: true,
       legacyColorSpace: true,

@@ -6,12 +6,14 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const CommonUtil: typeof import('@wot-ui/ui').CommonUtil
   const EffectScope: typeof import('vue').EffectScope
   const PageUrlConst: typeof import('@/constant/pageConst.ts').PageUrlConst
   const acceptHMRUpdate: typeof import('pinia').acceptHMRUpdate
   const computed: typeof import('vue').computed
   const createApp: typeof import('vue').createApp
   const createPinia: typeof import('pinia').createPinia
+  const createRouter: typeof import('@wot-ui/router').createRouter
   const customRef: typeof import('vue').customRef
   const defineAsyncComponent: typeof import('vue').defineAsyncComponent
   const defineComponent: typeof import('vue').defineComponent
@@ -99,10 +101,18 @@ declare global {
   const useAttrs: typeof import('vue').useAttrs
   const useCssModule: typeof import('vue').useCssModule
   const useCssVars: typeof import('vue').useCssVars
+  const useDialog: typeof import('@wot-ui/ui').useDialog
   const useId: typeof import('vue').useId
+  const useMessage: typeof import('wot-design-uni').useMessage
   const useModel: typeof import('vue').useModel
+  const useNotify: typeof import('@wot-ui/ui').useNotify
+  const usePagination: typeof import('alova/client').usePagination
+  const useRequest: typeof import('alova/client').useRequest
+  const useRoute: typeof import('@wot-ui/router').useRoute
+  const useRouter: typeof import('@wot-ui/router').useRouter
   const useSlots: typeof import('vue').useSlots
   const useTemplateRef: typeof import('vue').useTemplateRef
+  const useToast: typeof import('@wot-ui/ui').useToast
   const useUserStore: typeof import('../store/module/useUserStore').useUserStore
   const watch: typeof import('vue').watch
   const watchEffect: typeof import('vue').watchEffect
@@ -121,12 +131,14 @@ import { UnwrapRef } from 'vue'
 declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
+    readonly CommonUtil: UnwrapRef<typeof import('@wot-ui/ui')['CommonUtil']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly PageUrlConst: UnwrapRef<typeof import('@/constant/pageConst.ts')['PageUrlConst']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
     readonly createPinia: UnwrapRef<typeof import('pinia')['createPinia']>
+    readonly createRouter: UnwrapRef<typeof import('@wot-ui/router')['createRouter']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
@@ -214,10 +226,17 @@ declare module 'vue' {
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
+    readonly useDialog: UnwrapRef<typeof import('@wot-ui/ui')['useDialog']>
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
+    readonly useNotify: UnwrapRef<typeof import('@wot-ui/ui')['useNotify']>
+    readonly usePagination: UnwrapRef<typeof import('alova/client')['usePagination']>
+    readonly useRequest: UnwrapRef<typeof import('alova/client')['useRequest']>
+    readonly useRoute: UnwrapRef<typeof import('@wot-ui/router')['useRoute']>
+    readonly useRouter: UnwrapRef<typeof import('@wot-ui/router')['useRouter']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
+    readonly useToast: UnwrapRef<typeof import('@wot-ui/ui')['useToast']>
     readonly useUserStore: UnwrapRef<typeof import('../store/module/useUserStore')['useUserStore']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>

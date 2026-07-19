@@ -5,6 +5,18 @@ export const UnpluginAutoImport = AutoImport({
     'vue',
     'uni-app',
     {
+      from: '@wot-ui/router',
+      imports: ['createRouter', 'useRouter', 'useRoute'],
+    },
+    {
+      from: '@wot-ui/ui',
+      imports: ['useToast', 'useDialog', 'useNotify', 'CommonUtil'],
+    },
+    {
+      from: 'alova/client',
+      imports: ['usePagination', 'useRequest'],
+    },
+    {
       unocss: ['uno'],
     },
     'pinia',
