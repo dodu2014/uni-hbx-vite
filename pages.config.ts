@@ -58,7 +58,7 @@ export default defineUniPages({
       },
       {
         visible: true,
-        pagePath: 'pages/my/index-page',
+        pagePath: 'page/my/index-page',
         text: '我的',
         iconPath: 'static/tabbar/tabbar-icon_user-default.png',
         selectedIconPath: 'static/tabbar/tabbar-icon_user-selected.png',
