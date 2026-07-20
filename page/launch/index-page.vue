@@ -26,7 +26,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <blank-layout>
+  <vite>
     <view>启动</view>
-  </blank-layout>
+  </vite>
 </template>

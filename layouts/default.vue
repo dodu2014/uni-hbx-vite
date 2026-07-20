@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <view page="2332" class="border-t-warn-6 bg-warn-4 pt-3">
+  <view class="border-t-warn-6 bg-red pt-3">
     <slot />
   </view>
 </template>

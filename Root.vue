@@ -9,7 +9,7 @@ defineOptions({
 </script>
 
 <template>
-  <view class="size-full">
+  <view>
     <ku-root-view />
   </view>
 </template>

@@ -2,6 +2,7 @@
 import IndexTest from '@/page/home/component/IndexTest.vue'
 
 definePage({
+  layout: 'default',
   style: {
     navigationBarTitleText: '首页',
   },

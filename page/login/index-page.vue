@@ -2,6 +2,7 @@
 import { routeTo } from '@/util/routeUtil.ts'
 
 definePage({
+  layout: 'default',
   style: {
     navigationBarTitleText: '登录',
   },

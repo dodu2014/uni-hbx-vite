@@ -12,7 +12,6 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    BlankLayout: typeof import('@/layout/BlankLayout.vue')['BlankLayout']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     WdButton: typeof import('@wot-ui/ui/components/wd-button/wd-button.vue')['WdButton']
@@ -22,7 +21,6 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
-  const BlankLayout: typeof import('@/layout/BlankLayout.vue')['BlankLayout']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
   const WdButton: typeof import('@wot-ui/ui/components/wd-button/wd-button.vue')['WdButton']

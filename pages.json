@@ -32,6 +32,7 @@
 		{
 			"path": "page/business/business",
 			"type": "page",
+			"layout": "default",
 			"style": {
 				"navigationBarTitleText": "业务"
 			},
@@ -40,6 +41,7 @@
 		{
 			"path": "page/business/index",
 			"type": "page",
+			"layout": "default",
 			"style": {
 				"navigationBarTitleText": "业务"
 			},
@@ -48,6 +50,7 @@
 		{
 			"path": "page/home/index-page",
 			"type": "page",
+			"layout": "default",
 			"style": {
 				"navigationBarTitleText": "首页"
 			},
@@ -56,6 +59,7 @@
 		{
 			"path": "page/login/index-page",
 			"type": "page",
+			"layout": "default",
 			"style": {
 				"navigationBarTitleText": "登录"
 			},
@@ -64,6 +68,7 @@
 		{
 			"path": "page/my/index-page",
 			"type": "page",
+			"layout": "default",
 			"style": {
 				"navigationBarTitleText": "我的"
 			},
@@ -78,6 +83,7 @@
 				{
 					"path": "index-page",
 					"type": "page",
+					"layout": "default",
 					"style": {
 						"navigationBarTitleText": "分包"
 					},
