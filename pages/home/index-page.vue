@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import IndexTest from '@/page/home/component/IndexTest.vue'
+import IndexTest from './component/IndexTest.vue'
 
 definePage({
   style: {

@@ -37,28 +37,28 @@ export default defineUniPages({
     list: [
       {
         visible: true,
-        pagePath: 'page/launch/index-page',
+        pagePath: 'pages/launch/index-page',
         text: '短剧',
         iconPath: 'static/tabbar/tabbar-icon_home-default.png',
         selectedIconPath: 'static/tabbar/tabbar-icon_home-selected.png',
       },
       {
         visible: true,
-        pagePath: 'page/login/index-page',
+        pagePath: 'pages/login/index-page',
         text: '短视频',
         iconPath: 'static/tabbar/tabbar-icon_video-default.png',
         selectedIconPath: 'static/tabbar/tabbar-icon_video-selected.png',
       },
       {
         visible: true,
-        pagePath: 'page/home/index-page',
+        pagePath: 'pages/home/index-page',
         text: '赚钱',
         iconPath: 'static/tabbar/tabbar-icon_script-default.png',
         selectedIconPath: 'static/tabbar/tabbar-icon_script-selected.png',
       },
       {
         visible: true,
-        pagePath: 'page/my/index-page',
+        pagePath: 'pages/my/index-page',
         text: '我的',
         iconPath: 'static/tabbar/tabbar-icon_user-default.png',
         selectedIconPath: 'static/tabbar/tabbar-icon_user-selected.png',

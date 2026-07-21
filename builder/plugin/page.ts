@@ -1,12 +1,11 @@
 import UniPages from '@uni-helper/vite-plugin-uni-pages'
 
-import { handlePageName, scanPageFilter, writePageConst } from '../util.ts'
+import { handlePageName, scanPageFilter, writePageConst } from '../util'
 
 export const UniHelperVitePluginUniPages = UniPages({
-  dir: 'page',
-  subPackages: ['page-a'],
+  dir: 'pages',
+  subPackages: ['subPages'],
   exclude: ['**/component/**/**.*'],
-  routeBlockLang: 'jsonc',
   dts: 'dts/uni-pages.d.ts',
   outDir: '',
   onAfterScanPages: (ctx) => {

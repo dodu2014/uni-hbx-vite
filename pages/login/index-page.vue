@@ -8,7 +8,7 @@ definePage({
 })
 
 const toPageA = () => {
-  routeTo(PageUrlConst.PAGE_A_INDEX_PAGE)
+  routeTo(PageUrlConst.SUBPAGES_INDEX_PAGE)
 }
 
 onLoad(() => {

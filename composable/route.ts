@@ -27,9 +27,9 @@ export const interceptorOptions: UniApp.InterceptorOptions = {
     const parsedUrl = parseUrl(originalUrl).path as RouteUrlEnum
     console.log(`【APP】interceptor route parsed：${parsedUrl}`)
 
-    if (parsedUrl === PageUrlConst.PAGE_LOGIN_INDEX_PAGE) {
+    if (parsedUrl === PageUrlConst.PAGES_LOGIN_INDEX_PAGE) {
       if (userStore.token) {
-        reLaunch(PageUrlConst.PAGE_HOME_INDEX_PAGE)
+        reLaunch(PageUrlConst.PAGES_HOME_INDEX_PAGE)
         return false
       }
     }
@@ -42,7 +42,7 @@ export const interceptorOptions: UniApp.InterceptorOptions = {
         showToast('还未登录，即将跳转...')
         appStore.reset()
         setTimeout(() => {
-          reLaunch(PageUrlConst.PAGE_LOGIN_INDEX_PAGE)
+          reLaunch(PageUrlConst.PAGES_LOGIN_INDEX_PAGE)
         }, 1300)
         return false
       }
